@@ -1,0 +1,136 @@
+$purple : #803588;
+.transition {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+header {
+    background-color: #fff;
+    padding: 10px 0;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.04);
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    .logo {
+        width: 50px;
+    }
+    h1 {
+        font-size: 21px;
+        margin: 0;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    .header-widgets {
+        display: flex;
+        align-items: center;
+        ul {
+            position: absolute;
+            box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.04);
+            top: 30px;
+            width: 150px;
+            padding: 0px;
+            background: #fff;
+            z-index: 9;
+            li {
+                padding: 6px 12px;
+                list-style-type: none;
+                border-bottom: 1px solid #f4f4f4;
+                cursor: pointer;
+                font-size: 14px;
+                @extend .transition;
+                &:hover {
+                    background-color: $purple;
+                    color: #fff;
+                }
+            }
+        }
+        .seatch-text {
+            position: absolute;
+            width: 700px;
+            right: 40px;
+            border: 0;
+            border-bottom: 2px solid $purple;
+            border-radius: 0;
+            font-size: 17px;
+            box-shadow: 0 0;
+            z-index: 9;
+        }
+        div {
+            &:not(.serach-icon)
+            {
+                position: relative;
+                border: 1px solid #e0e0e0;
+                padding: 5px;
+                border-radius: 5px;
+                margin: 0 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        svg {
+            width: 20px;
+            height: 20px;
+            padding: 2px;
+            cursor: pointer;
+            fill: $purple;
+        }
+        .avtar {
+            border: 0 !important;
+            cursor: pointer;
+            img {
+                width: 30px;
+                height: 30px;
+            }
+            svg {
+                margin-left: 3px;
+                height: 15px;
+                width: 15px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+ .mb-manu {
+        position: absolute;
+        left: 9px;
+        top: 5px;
+     span {
+        display: block;
+        height: 2px;
+        width: 26px;
+        background: #803588;
+        margin-bottom: 8px;
+     }
+ }
+ header {
+    h1 {
+        font-size: 15px;
+    }
+    .avtar {
+        span {
+            display: none;
+        }
+    }
+    .logo {
+        width: 35px;
+        float: right;
+    }
+    .header-widgets 
+    {
+        ul {
+            right: 0;
+        }
+        .seatch-text {
+            width: 245px;
+            right: -77px;
+            z-index: 99;
+            top: 45px;
+            border: 2px solid #803588;
+        }
+    }
+ } 
+} 
